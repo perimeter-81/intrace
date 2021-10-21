@@ -1,0 +1,103 @@
+
+[
+	{
+		"country": "United States",
+		"city": "California",
+		"unlocode": "us-west-1",
+		"provider": "",
+		"asnumber": "",
+		"host": "root@104.248.89.240",
+		"port": 22,
+		"group": "California",
+		"residential": false,
+		"providerurl": "",
+		"caps": {
+			"bgp": false,
+			"mtr": 4,
+			"trace": true,
+			"ping": true,
+			"dnsr": true,
+			"dnst": true
+		}
+	},
+	{
+		"country": "United States",
+		"city": "Virginia",
+		"unlocode": "us-east-1",
+		"provider": "",
+		"asnumber": "",
+		"host": "root@california.lookinglass.p81",
+		"port": 22,
+		"group": "Virginia",
+		"residential": false,
+		"providerurl": "",
+		"caps": {
+			"bgp": false,
+			"mtr": 4,
+			"trace": true,
+			"ping": true,
+			"dnsr": true,
+			"dnst": true
+		}
+	},
+	{
+		"country": "England",
+		"city": "London",
+		"unlocode": "eu-west-2",
+		"provider": "",
+		"asnumber": "",
+		"host": "root@london.lookinglass.p81",
+		"port": 22,
+		"group": "London",
+		"residential": false,
+		"providerurl": "",
+		"caps": {
+			"bgp": false,
+			"mtr": 4,
+			"trace": true,
+			"ping": true,
+			"dnsr": true,
+			"dnst": true
+		}
+	},
+	{
+		"country": "Italy",
+		"city": "Milan",
+		"unlocode": "eu-south-1",
+		"provider": "",
+		"asnumber": "",
+		"host": "root@milan.lookinglass.p81",
+		"port": 22,
+		"group": "Milan",
+		"residential": false,
+		"providerurl": "",
+		"caps": {
+			"bgp": false,
+			"mtr": 4,
+			"trace": true,
+			"ping": true,
+			"dnsr": true,
+			"dnst": true
+		}
+	},
+	{
+		"country": "Singapore",
+		"city": "Singapore",
+		"unlocode": "ap-southeast-1",
+		"provider": "",
+		"asnumber": "",
+		"host": "root@singapore.lookinglass.p81",
+		"port": 22,
+		"group": "Singapore",
+		"residential": false,
+		"providerurl": "",
+		"caps": {
+			"bgp": false,
+			"mtr": 4,
+			"trace": true,
+			"ping": true,
+			"dnsr": true,
+			"dnst": true
+		}
+	},
+]
