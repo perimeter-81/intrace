@@ -9,8 +9,4 @@ RUN DEBIAN_FRONTEND=noninteractive && apt update && apt install -y \
     dnsutils \
     iputils-ping 
 
-CMD ["/bin/bash"] 
-
-
-
-
+CMD ["/bin/bash"]
