@@ -9,4 +9,6 @@ RUN DEBIAN_FRONTEND=noninteractive && apt update && apt install -y \
     dnsutils \
     iputils-ping 
 
-CMD ["/bin/bash"]
+RUN service ssh start
+
+CMD ["/usr/sbin/sshd","-D"]
