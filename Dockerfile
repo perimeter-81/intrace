@@ -2,7 +2,13 @@ FROM ubuntu:latest
 
 COPY . .
 COPY probes.json /config/
-COPY looking_glass looking_glass.pub ./
+
+RUN mkdir /root/.ssh && touch /root/.ssh/authorized_keys
+COPY looking_glass.pub ./root/.ssh/authorized_keys
+COPY looking_glass looking_glass.pub ./root/.ssh/
+RUN chmod 600 /root/.ssh
+RUN chmod 600 /root/.ssh/looking_glass 
+RUN chmod 600 /root/.ssh/authorized_keys
 
 RUN DEBIAN_FRONTEND=noninteractive && apt update && apt install -y curl ssh 
 RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
