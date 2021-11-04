@@ -4,10 +4,10 @@ COPY . .
 COPY probes.json /config/
 
 RUN mkdir /root/.ssh && touch /root/.ssh/authorized_keys
-COPY looking_glass.pub ./root/.ssh/authorized_keys
-COPY looking_glass looking_glass.pub ./root/.ssh/
+COPY id_rsa.pub ./root/.ssh/authorized_keys
+COPY id_rsa id_rsa.pub ./root/.ssh/
 RUN chmod 600 /root/.ssh
-RUN chmod 600 /root/.ssh/looking_glass 
+RUN chmod 600 /root/.ssh/id_rsa 
 RUN chmod 600 /root/.ssh/authorized_keys
 
 RUN DEBIAN_FRONTEND=noninteractive && apt update && apt install -y curl ssh 
