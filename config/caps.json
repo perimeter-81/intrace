@@ -23,16 +23,16 @@
 		"cmd4": "ping -c 10 -i 0.2 -t 255 '{{TARGET}}' 2>&1",
 		"cmd6": "ping6 -c 10 -i 0.2 -t 255 '{{TARGET}}' 2>&1"
 	},
-	"dnst": {
-		"name": "DNS +trace",
-		"highlight": ";; Received",
-		"cmd4": "dig @198.41.0.4 +noall +answer +trace +norecurse +timeout=1 +tries=5 A '{{TARGET}}' 2>&1; dig @198.41.0.4 +noall +answer +trace +norecurse +timeout=1 +tries=5 AAAA '{{TARGET}}' 2>&1",
-		"cmd6": "dig @198.41.0.4 +noall +answer +trace +norecurse +timeout=1 +tries=5 A '{{TARGET}}' 2>&1; dig @198.41.0.4 +noall +answer +trace +norecurse +timeout=1 +tries=5 AAAA '{{TARGET}}' 2>&1"
-	},
 	"dnsr": {
-		"name": "DNS Resolver Test",
-		"highlight": ";; Query time: ",
-		"cmd4": "rnd=$RANDOM; dig '@{{TARGET}}' +all +nsid A $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1; dig '@{{TARGET}}' +all +nsid AAAA $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1",
-		"cmd6": "rnd=$RANDOM; dig '@{{TARGET}}' +all +nsid A $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1; dig '@{{TARGET}}' +all +nsid AAAA $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1"
+		"name": "DNS",
+		"highlight": ";; Received",
+		"cmd4": "dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1; dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1",
+		"cmd6": "dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1; dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1"
 	}
+	#"dnsr": {
+	#	"name": "DNS Resolver Test",
+	#	"highlight": ";; Query time: ",
+	#	"cmd4": "rnd=$RANDOM; dig '@{{TARGET}}' +all +nsid A $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1; dig '@{{TARGET}}' +all +nsid AAAA $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1",
+	#	"cmd6": "rnd=$RANDOM; dig '@{{TARGET}}' +all +nsid A $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1; dig '@{{TARGET}}' +all +nsid AAAA $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1"
+	#}
 }
