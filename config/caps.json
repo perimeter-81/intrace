@@ -29,10 +29,5 @@
 		"cmd4": "dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1; dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1",
 		"cmd6": "dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1; dig +timeout=1 +tries=5 A '{{TARGET}}' 2>&1"
 	}
-	#"dnsr": {
-	#	"name": "DNS Resolver Test",
-	#	"highlight": ";; Query time: ",
-	#	"cmd4": "rnd=$RANDOM; dig '@{{TARGET}}' +all +nsid A $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1; dig '@{{TARGET}}' +all +nsid AAAA $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1",
-	#	"cmd6": "rnd=$RANDOM; dig '@{{TARGET}}' +all +nsid A $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1; dig '@{{TARGET}}' +all +nsid AAAA $(cat /proc/sys/kernel/random/uuid | cut -d- -f1).test.mtr.sh 2>&1"
-	#}
+
 }
